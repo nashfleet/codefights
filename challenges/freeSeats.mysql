@@ -1,0 +1,10 @@
+CREATE PROCEDURE freeSeats()
+BEGIN
+    SELECT flights.flight_id, (planes.number_of_seats - count(purchases.flight_id)) as free_seats
+    FROM flights 
+    JOIN planes
+    ON flights.plane_id=planes.plane_id
+    LEFT OUTER JOIN purchases
+    ON flights.flight_id=purchases.flight_id
+    GROUP BY flight_id; 
+END
