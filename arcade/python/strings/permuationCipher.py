@@ -13,6 +13,8 @@ Here's how permutation cipher works: the key to it consists of all the letters o
 Given the password you always use, your task is to encrypt it using the permutation cipher
   with the given key.
 """
+
+
 def permutationCipher(password, key):
     table = str.maketrans("abcdefghijklmnopqrstuvwxyz", key)
     return password.translate(table)
