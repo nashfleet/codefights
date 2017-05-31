@@ -7,7 +7,7 @@ The Abanamama Version System (AVS) is a software versioning and
   second part consists of symbols of English alphabet.
 
 Given such commit, your task is go remove the username part from
-  it and return the second part as an answer.
+  git and return the second part as an answer.
 """
 
 
